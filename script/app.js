@@ -39,9 +39,9 @@ const logoutUser = document.querySelector (`#logoutUser`);
 let userData = null;
 
 async function userDataObject(){
-    const obj = await checkUserStatus();
-    userData = obj;
-    console.log(`App.js Function` , userData);
+  const obj = await checkUserStatus();
+  userData = obj;
+  console.log(`App.js Function` , userData);
     
 };
 
@@ -54,8 +54,8 @@ userDataObject();
 
 logoutUser.addEventListener(`click` , () => {
 
-    const auth = getAuth();
-signOut(auth).then(() => {
+signOut(auth)
+.then(() => {
   window.location = `login.html`;
 }).catch((error) => {
   alert(error);
